@@ -1,0 +1,22 @@
+{
+  "name": "personal-site-react",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chadxz/personal-site-react.git"
+  },
+  "author": "Chad McElligott <chad.mcelligott@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chadxz/personal-site-react/issues"
+  },
+  "homepage": "https://github.com/chadxz/personal-site-react",
+  "devDependencies": {
+    "jsx-loader": "^0.12.2",
+    "jsxhint": "^0.7.0",
+    "react": "^0.12.1",
+    "webpack": "^1.4.13"
+  }
+}
