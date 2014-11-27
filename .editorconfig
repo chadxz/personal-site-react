@@ -10,6 +10,6 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 
 # 2 space indentation
-[{*.js,*.json,.jshint*,.jscsrc}]
+[{*.js,*.jsx,*.json,.jshint*,.jscsrc}]
 indent_style = space
 indent_size = 2
