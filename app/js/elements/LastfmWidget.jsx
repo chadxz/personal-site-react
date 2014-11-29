@@ -32,6 +32,7 @@ var LastfmWidget = React.createClass({
       <div>
         <div>Recent listens via Last.fm</div>
         {displayed}
+        <a href="http://www.last.fm/user/chadxz" title="Chad's Last.fm profile">View listening profile at Last.fm</a>
       </div>
     );
   },

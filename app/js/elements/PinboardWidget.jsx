@@ -32,6 +32,7 @@ var PinboardWidget = React.createClass({
       <div>
         <div>Recent bookmarks on Pinboard</div>
         {displayed}
+        <a href="https://pinboard.in/u:chadxz" title="Chad's pinboard">View all bookmarks at pinboard.in</a>
       </div>
     );
   },
