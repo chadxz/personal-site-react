@@ -2,9 +2,14 @@
 var React = require('react');
 
 var LastfmTrackList = React.createClass({
+
+  propTypes: {
+    tracks: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
+  },
+
   render: function () {
-    var trackNodes = this.props.tracks.map(function (track) {
-      return <li key={track}>{track}</li>;
+    var trackNodes = this.props.tracks.map(function (track, index) {
+      return <li key={index}>{JSON.stringify(track)}</li>;
     });
 
     return (

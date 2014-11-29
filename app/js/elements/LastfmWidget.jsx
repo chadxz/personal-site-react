@@ -1,12 +1,12 @@
 'use strict';
 var React = require('react');
-var TracksStore = require('../stores/TracksStore');
+var TrackStore = require('../stores/TrackStore');
 var LoadingIndicator = require('./LoadingIndicator');
 var LastfmTrackList = require('./LastfmTrackList');
 
 function getTracksState() {
   return {
-    tracks: TracksStore.getAll()
+    tracks: TrackStore.getAll()
   };
 }
 
@@ -16,11 +16,11 @@ var LastfmWidget = React.createClass({
   },
 
   componentDidMount: function () {
-    TracksStore.addChangeListener(this._onChange);
+    TrackStore.addChangeListener(this._onChange);
   },
 
   componentWillUnmount: function () {
-    TracksStore.removeChangeListener(this._onChange);
+    TrackStore.removeChangeListener(this._onChange);
   },
 
   render: function () {

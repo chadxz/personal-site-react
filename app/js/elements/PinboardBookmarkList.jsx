@@ -2,12 +2,19 @@
 var React = require('react');
 
 var PinboardBookmarkList = React.createClass({
+
+  propTypes: {
+    bookmarks: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
+  },
+
   render: function () {
+    var bookmarkNodes = this.props.bookmarks.map(function (bookmark, index) {
+      return <li key={index}>{JSON.stringify(bookmark)}</li>;
+    });
+
     return (
       <ul>
-        <li>Bookmark 1</li>
-        <li>Bookmark 2</li>
-        <li>Bookmark 3</li>
+        {bookmarkNodes}
       </ul>
     );
   }

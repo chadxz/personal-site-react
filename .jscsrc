@@ -38,7 +38,6 @@
   "disallowMultipleLineBreaks": true,
   "requireBlocksOnNewline": 1,
   "requireSpacesInsideObjectBrackets": "allButNested",
-  "requireSpacesInsideArrayBrackets": "allButNested",
   "disallowQuotedKeysInObjects": "allButReserved",
   "disallowSpaceAfterObjectKeys": true,
   "requireSpaceBeforeObjectValues": true,
@@ -55,5 +54,10 @@
   "requireSpaceAfterLineComment": true,
   "validateParameterSeparator": ", ",
   "validateIndentation": 2,
-  "excludeFiles": ["node_modules/**", "coverage/**"]
+  "excludeFiles": [
+    "node_modules/**",
+    "coverage/**",
+    "app/bundle.js",
+    "**/*.jsx"
+  ]
 }

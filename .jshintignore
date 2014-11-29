@@ -1,2 +1,4 @@
 node_modules
 coverage
+**/*.jsx
+app/bundle.js
