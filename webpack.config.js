@@ -19,6 +19,6 @@ module.exports = {
   },
   plugins: [
     // fix weird inclusion of all languages when requiring moment
-    new webpack.ContextReplacementPlugin(/moment[\\\/]lang$/, /^\.\/(en-gb)$/)
+    new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /en-GB/)
   ]
 };
