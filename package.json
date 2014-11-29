@@ -17,6 +17,7 @@
     "flux": "^2.0.1",
     "jsx-loader": "^0.12.2",
     "jsxhint": "^0.7.0",
+    "moment": "^2.8.4",
     "object-assign": "^2.0.0",
     "react": "^0.12.1",
     "superagent": "^0.21.0",

@@ -1,4 +1,5 @@
 'use strict';
+var webpack = require('webpack');
 
 module.exports = {
   entry: './app/js/app.jsx',
@@ -15,5 +16,9 @@ module.exports = {
   resolve: {
     // allows you to require('file') instead of 'file.jsx'
     extensions: ['', '.js', '.jsx']
-  }
+  },
+  plugins: [
+    // fix weird inclusion of all languages when requiring moment
+    new webpack.ContextReplacementPlugin(/moment[\\\/]lang$/, /^\.\/(en-gb)$/)
+  ]
 };
