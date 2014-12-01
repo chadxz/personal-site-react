@@ -1,0 +1,14 @@
+{
+  "name": "personal-site-react",
+  "version": "1.0.0",
+  "homepage": "https://github.com/chadxz/personal-site-react",
+  "authors": [
+    "Chad McElligott <chad.mcelligott@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "font-awesome": "~4.2.0",
+    "bootstrap": "~3.3.1"
+  }
+}

@@ -1,0 +1,98 @@
+p, h1, h2, h3, h4, a {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+p {
+    font-size: 1.125em;
+}
+
+.page-title {
+  text-align: center;
+}
+
+.page-title a:link,
+.page-title a:active,
+.page-title a:visited,
+.page-title a:hover
+{
+    color: #333;
+    text-decoration: none;
+}
+
+.page-footer {
+    border-bottom: 0;
+    margin-bottom: 20px;
+}
+
+.page-footer small {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.author-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.author-links a:link,
+.author-links a:active,
+.author-links a:visited,
+.author-links a:hover
+{
+    color: #333;
+    text-decoration: none;
+}
+
+.author-links .label {
+    display: none;
+}
+
+a:link, a:active, a:hover {
+    color: #3CA53C;
+}
+
+a:visited {
+    color: #097209;
+}
+
+small {
+    font-style: italic;
+    color: #949494;
+}
+
+small span.light {
+  color: #AFAFAF;
+}
+
+abbr[title] {
+    cursor: auto;
+    border-bottom: 0;
+}
+
+figure {
+  width: 100%;
+  margin: 15px 0;
+  text-align: center;
+}
+
+figure img {
+  display: inline-block;
+  height: auto;
+  margin: auto;
+  max-width: 100%;
+}
+
+figcaption {
+  font-size: 85%;
+  font-style: italic;
+  color: #4f4f4f;
+  margin-top: 5px;
+}
+
+.lastfm-track-list {
+  background: url('/images/lfm.png') no-repeat top right;
+}
+
+.pinboard-list {
+  background: url('/images/pb.png') no-repeat top right;
+}

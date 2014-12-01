@@ -5,3 +5,5 @@ coverage
 .DS_Store
 app/bundle.js
 app/bundle.js.map
+app/bower_components
+webpack.json
