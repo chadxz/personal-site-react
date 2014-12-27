@@ -31,7 +31,7 @@ var LastfmTrackList = React.createClass({
     });
 
     return (
-      <ul>
+      <ul id="lastfmTracks" className="list-unstyled">
         {trackNodes}
       </ul>
     );

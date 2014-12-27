@@ -22,7 +22,7 @@ var PinboardBookmarkList = React.createClass({
     });
 
     return (
-      <ul>
+      <ul id="pinboardItems" className="list-unstyled">
         {bookmarkNodes}
       </ul>
     );

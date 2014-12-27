@@ -5,7 +5,7 @@ module.exports = {
   entry: './app/js/app.jsx',
   output: {
     // the name of the file to be built
-    filename: './app/bundle.js',
+    filename: './app-dist/production.js',
     devtoolModuleFilenameTemplate: '[resource-path]'
   },
   module: {

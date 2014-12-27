@@ -69,30 +69,18 @@ abbr[title] {
     border-bottom: 0;
 }
 
-figure {
-  width: 100%;
-  margin: 15px 0;
-  text-align: center;
-}
-
-figure img {
-  display: inline-block;
-  height: auto;
-  margin: auto;
-  max-width: 100%;
-}
-
-figcaption {
-  font-size: 85%;
-  font-style: italic;
-  color: #4f4f4f;
-  margin-top: 5px;
-}
-
 .lastfm-track-list {
-  background: url('/images/lfm.png') no-repeat top right;
+    background: url('images/lfm.png') no-repeat top right;
 }
 
 .pinboard-list {
-  background: url('/images/pb.png') no-repeat top right;
+    background: url('images/pb.png') no-repeat top right;
+}
+
+.spinner {
+    text-align: center;
+}
+
+.spinner .fa-spinner {
+    margin: auto;
 }

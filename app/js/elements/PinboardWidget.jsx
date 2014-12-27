@@ -29,10 +29,12 @@ var PinboardWidget = React.createClass({
       <LoadingIndicator />;
 
     return (
-      <div>
-        <div>Recent bookmarks on Pinboard</div>
-        {displayed}
-        <a href="https://pinboard.in/u:chadxz" title="Chad's pinboard">View all bookmarks at pinboard.in</a>
+      <div className="panel panel-default">
+        <div className="panel-heading text-center">Recent bookmarks on Pinboard</div>
+        <div id="pinboardList" className="panel-body pinboard-list">
+          {displayed}
+          <a href="https://pinboard.in/u:chadxz" title="Chad's pinboard">View all bookmarks at pinboard.in</a>
+        </div>
       </div>
     );
   },
