@@ -55,8 +55,10 @@
   "validateParameterSeparator": ", ",
   "validateIndentation": 2,
   "excludeFiles": [
+    "app/bower_components/**",
     "node_modules/**",
     "coverage/**",
+    "app-dist/**",
     "app/bundle.js",
     "**/*.jsx"
   ]

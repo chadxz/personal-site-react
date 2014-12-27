@@ -1,4 +1,5 @@
 node_modules
 coverage
 **/*.jsx
-app/bundle.js
+app-dist/
+app/bower_components
