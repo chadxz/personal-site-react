@@ -13,6 +13,7 @@ var LastfmTrackList = React.createClass({
     var dateTimeFormat = 'MMMM D, YYYY @ h:mm a';
 
     var trackNodes = this.props.tracks.map(function (track) {
+      var uniqueId = track.date.uts + track.url;
       var artistUrl = lastfmMusicUrl + track.artist.url.replace(/\s/gi, '+');
       var isPlaying = track['@attr'] && (track['@attr'].nowplaying === 'true');
       var relativeDateTime = track.date && moment.unix(track.date.uts).fromNow();
@@ -22,7 +23,7 @@ var LastfmTrackList = React.createClass({
         <small><abbr title={formattedDateTime}>{relativeDateTime}</abbr></small>;
 
       return (
-        <li key={track.mbid}>
+        <li key={uniqueId}>
           <a href={artistUrl} title={track.artist.name + " on Last.fm"}>{track.artist.name}</a>&nbsp;-&nbsp;
           <a href={track.url} title={track.name + " on Last.fm"}>{track.name}</a>&nbsp;
           {displayedTime}
