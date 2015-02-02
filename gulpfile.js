@@ -12,7 +12,15 @@ var webpackConfig = require('./webpack.config');
 var buildDestination = 'app-dist';
 
 gulp.task('clean', function (callback) {
-  del(buildDestination, { force: true }, callback);
+  var cleanPattern = [
+    buildDestination + '/fonts/**',
+    buildDestination + '/images/**',
+    buildDestination + '/index.html',
+    buildDestination + '/production.css',
+    buildDestination + '/production.js'
+  ];
+
+  del(cleanPattern, { force: true }, callback);
 });
 
 gulp.task('copy-fonts', ['clean'], function () {
