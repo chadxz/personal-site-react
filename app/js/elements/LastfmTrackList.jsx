@@ -13,7 +13,8 @@ var LastfmTrackList = React.createClass({
     var dateTimeFormat = 'MMMM D, YYYY @ h:mm a';
 
     var trackNodes = this.props.tracks.map(function (track) {
-      var uniqueId = track.date.uts + track.url;
+      var displayedTime;
+      var uniqueId = ((track.date && track.date.uts) || 'now') + track.url;
       var artistUrl = lastfmMusicUrl + track.artist.url.replace(/\s/gi, '+');
       var isPlaying = track['@attr'] && (track['@attr'].nowplaying === 'true');
       var relativeDateTime = track.date && moment.unix(track.date.uts).fromNow();
