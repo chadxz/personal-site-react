@@ -12,5 +12,20 @@ In the future, I plan to add some websockets functionality to dynamically displa
 
 ### to run
 
-    npm install
-    npm start
+```sh
+npm install
+npm start
+```
+
+### to deploy to github pages
+This isn't really the best process, but it works and I can't be bothered to look into making it better right now.
+
+```sh
+rm -rf app-dist
+git clone https://github.com/chadxz/chadxz.github.io.git app-dist
+npm run build
+cd app-dist
+git add -A
+git commit -m "new stuff"
+git push
+```
