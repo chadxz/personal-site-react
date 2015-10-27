@@ -1,14 +1,21 @@
-'use strict';
-var React = require('react');
-var PinboardWidget = require('./elements/PinboardWidget');
-var LastfmWidget = require('./elements/LastfmWidget');
-var BookmarkActions = require('./actions/BookmarkActions');
-var TrackActions = require('./actions/TrackActions');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import PinboardWidget from './elements/PinboardWidget';
+import LastfmWidget from './elements/LastfmWidget';
+import pinboardActions from './actions/pinboardActions';
+import lastfmActions from './actions/lastfmActions';
+require('es6-promise').polyfill();
 
 // render initial view
-React.render(<PinboardWidget />, document.getElementById('pinboardWidget'));
-React.render(<LastfmWidget />, document.getElementById('lastfmWidget'));
+ReactDOM.render(<PinboardWidget />, document.getElementById('pinboardWidget'));
+ReactDOM.render(<LastfmWidget />, document.getElementById('lastfmWidget'));
 
 // load data
-BookmarkActions.fetchBookmarks();
-TrackActions.fetchTracks();
+Promise.all([
+  pinboardActions.fetchBookmarks(),
+  lastfmActions.fetchTracks()
+]).then(function ([bookmarks, tracks]) {
+  // re-render with data
+  ReactDOM.render(<PinboardWidget bookmarks={bookmarks} />, document.getElementById('pinboardWidget'));
+  ReactDOM.render(<LastfmWidget tracks={tracks} />, document.getElementById('lastfmWidget'));
+});

@@ -1,14 +1,7 @@
-'use strict';
-var React = require('react');
+import React from 'react';
 
-var LoadingIndicator = React.createClass({
-  render: function () {
-    return (
-      <div className="spinner">
-        <i className="fa fa-spinner fa-spin"></i>
-      </div>
-    );
-  }
-});
-
-module.exports = LoadingIndicator;
+export default () => (
+  <div className="spinner">
+    <i className="fa fa-spinner fa-spin"></i>
+  </div>
+);

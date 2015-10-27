@@ -1,32 +1,28 @@
-'use strict';
-var React = require('react');
-var moment = require('moment');
+import React, { PropTypes } from 'react';
+import moment from 'moment';
 
-var PinboardBookmarkList = React.createClass({
-
-  propTypes: {
-    bookmarks: React.PropTypes.arrayOf(React.PropTypes.object).isRequired
-  },
-
-  render: function () {
-    var bookmarkNodes = this.props.bookmarks.map(function (bookmark) {
-      var dateTimeFormat = 'MMMM D, YYYY @ h:mm a';
-      var relativeDateTime = moment(bookmark.time).fromNow();
-      var formattedDateTime = moment(bookmark.time).format(dateTimeFormat);
-      return (
-        <li key={bookmark.hash}>
-          <a href={bookmark.href}>{bookmark.description}</a>&nbsp;
-          <small><abbr title={formattedDateTime}>{relativeDateTime}</abbr></small>
-        </li>
-      );
-    });
-
+function PinboardBookmarkList({ bookmarks }) {
+  const bookmarkNodes = bookmarks.map(function (bookmark) {
+    const dateTimeFormat = 'MMMM D, YYYY @ h:mm a';
+    const relativeDateTime = moment(bookmark.time).fromNow();
+    const formattedDateTime = moment(bookmark.time).format(dateTimeFormat);
     return (
-      <ul id="pinboardItems" className="list-unstyled">
-        {bookmarkNodes}
-      </ul>
+      <li key={bookmark.hash}>
+        <a href={bookmark.href}>{bookmark.description}</a>&nbsp;
+        <small><abbr title={formattedDateTime}>{relativeDateTime}</abbr></small>
+      </li>
     );
-  }
-});
+  });
 
-module.exports = PinboardBookmarkList;
+  return (
+    <ul id="pinboardItems" className="list-unstyled">
+      {bookmarkNodes}
+    </ul>
+  );
+}
+
+PinboardBookmarkList.propTypes = {
+  bookmarks: PropTypes.arrayOf(PropTypes.object).isRequired
+};
+
+export default PinboardBookmarkList;
