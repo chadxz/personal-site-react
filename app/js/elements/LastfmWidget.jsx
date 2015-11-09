@@ -19,7 +19,7 @@ function LastfmWidget({ tracks }) {
 }
 
 LastfmWidget.propTypes = {
-  tracks: PropTypes.arrayOf(PropTypes.object).isRequired
+  tracks: LastfmTrackList.propTypes.tracks
 };
 
 LastfmWidget.defaultProps = {

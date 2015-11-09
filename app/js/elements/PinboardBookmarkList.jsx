@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import moment from 'moment';
 
 function PinboardBookmarkList({ bookmarks }) {
-  const bookmarkNodes = bookmarks.map(function (bookmark) {
+  const bookmarkNodes = bookmarks.map(bookmark => {
     const dateTimeFormat = 'MMMM D, YYYY @ h:mm a';
     const relativeDateTime = moment(bookmark.time).fromNow();
     const formattedDateTime = moment(bookmark.time).format(dateTimeFormat);

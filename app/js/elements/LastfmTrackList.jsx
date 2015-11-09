@@ -5,7 +5,7 @@ function LastfmTrackList({ tracks }) {
   const lastfmMusicUrl = 'http://www.last.fm/music/';
   const dateTimeFormat = 'MMMM D, YYYY @ h:mm a';
 
-  const trackNodes = tracks.map(function (track) {
+  const trackNodes = tracks.map(track => {
     const uniqueId = (track.date && track.date.uts || 'now') + track.url;
     const artistUrl = lastfmMusicUrl + track.artist.url.replace(/\s/gi, '+');
     const isPlaying = track['@attr'] && (track['@attr'].nowplaying === 'true');

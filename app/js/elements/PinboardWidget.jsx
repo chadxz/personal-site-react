@@ -19,7 +19,7 @@ function PinboardWidget({ bookmarks }) {
 }
 
 PinboardWidget.propTypes = {
-  bookmarks: PropTypes.arrayOf(PropTypes.object).isRequired
+  bookmarks: PinboardBookmarkList.propTypes.bookmarks
 };
 
 PinboardWidget.defaultProps = {
