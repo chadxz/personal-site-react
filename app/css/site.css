@@ -77,6 +77,10 @@ abbr[title] {
     background: url('images/pb.png') no-repeat top right;
 }
 
+.pocket-article-list {
+    background: url('images/pocket.png') no-repeat top right;
+}
+
 .spinner {
     text-align: center;
 }
