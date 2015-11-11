@@ -1,6 +1,6 @@
 {
   "name": "personal-site-react",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "private": true,
   "scripts": {
     "start": "NODE_ENV=production gulp build && open app-dist/index.html",
